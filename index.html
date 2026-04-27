@@ -5,23 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Freelancer</title>
 
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/components/navbar.css">
+    <link rel="stylesheet" href="styles/components/hero.css">
+    <link rel="stylesheet" href="styles/components/card.css">
+    <link rel="stylesheet" href="styles/components/contact-form.css">
+
+    <script type="module">
+        import {loadCards} from"/js/components/card.js";
+        loadCards(".services__cards-container"); //Sin Ids muestra todas las cards
+    </script>
+
 </head>
 <body>
     <!-- Titulo -->
-<header>
-    <h1 class="navbar__tittle">
-        JACOBO AGUDELO
-        <span class="navbar__subtitle" >Rico programar</span>
-    </h1>   
-</header>
+    <header>
+        <h1 class="navbar__tittle">
+            JACOBO AGUDELO
+            <span class="navbar__subtitle" > Rico programar</span>
+        </h1>   
+    </header>
 
-<div class="navbar-container">
+    <div class="navbar-container"></div>
+    <div class="hero-container"></div>
+    
 
-</div>
+    <main class="services">
 
-<script src="/js/components/navbar.js"></script>
+        <h2 class="services__title">Mis Servicios</h2>
+        <div class="services__cards-container"></div>
+        <h2 class="services__contact-title">Contacto</h2>
+        <div class="services__form-container"></div>
+    </main>
 
+    <footer>
+        <p class="footer">@ 2026 By RicoProgramar. Todos los derechos reservados</p>
+    </footer>
 
+    <script src="/js/components/navbar.js"></script>
+    <script src="/js/components/hero.js"></script>
+    <script src="/js/components/contact-form.js"></script>
 </body>
 </html>

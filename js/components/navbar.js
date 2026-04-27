@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         fetch("/views/components/navbar.html")
         // la respuesta la convierte a texto plano
-            .then(Response => Response.text())
+            .then(response => response.text())
             // Inserta el contenido html del navbar em el contenedor correspondiente
             .then(data => {
                 navbarElement.innerHTML = data;
